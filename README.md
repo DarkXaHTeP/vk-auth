@@ -14,6 +14,15 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v0.0.6
+
+* 'error' event is not emited when no listeners attached and callback is present
+
+v0.0.5
+
+* Should work again after VK urls updates
+* Error for wrong credentials is now displayed again
+
 v0.0.4
 
 * PhantomJS is now started by 'execFile' command instead of 'exec'
