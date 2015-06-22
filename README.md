@@ -2,6 +2,9 @@
 
 Authorization in [Vkontakte](http://vk.com/) social network as [standalone/mobile](http://vk.com/dev/standalone) application. Allows you to get vk token with the help of PhantomJS headless browser.
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+  
 ## Example
 Using vk-auth is easy enough; it accepts two parameters in it's constructor (applicationId and required permissions) and provides single method for authorization:
 
@@ -95,4 +98,15 @@ Here is an example of received token parameters:
 ```
 To read more about this parameters go to [Client Application Authorization](http://vk.com/dev/auth_mobile) page.
 
-#### License: MIT
+## Сontribution
+Feel free to ask questions and post ideas, as well as send pull requests.
+If you want to support me, leave tip at Gratipay: [![Gratipay][gratipay-image]][gratipay-url]
+
+#### License: [MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/vk-auth.svg
+[npm-url]: https://npmjs.org/package/vk-auth
+[downloads-image]: https://img.shields.io/npm/dm/vk-auth.svg
+[downloads-url]: https://npmjs.org/package/vk-auth
+[gratipay-image]: https://img.shields.io/gratipay/DarkXaHTeP.svg
+[gratipay-url]: https://gratipay.com/DarkXaHTeP/
