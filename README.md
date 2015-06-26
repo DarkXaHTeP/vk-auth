@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/DarkXaHTeP/vk-auth.png?label=ready&title=Ready)](https://waffle.io/DarkXaHTeP/vk-auth)
 # vk-auth
 
 Authorization in [Vkontakte](http://vk.com/) social network as [standalone/mobile](http://vk.com/dev/standalone) application. Allows you to get vk token with the help of PhantomJS headless browser.
