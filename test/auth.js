@@ -1,3 +1,4 @@
+var domain = require("domain");
 var proxyquire = require('proxyquire');
 var chai = require('chai');
 var expect = chai.expect;
@@ -35,4 +36,61 @@ describe('Auth', function () {
             });
         })
     });
+
+    describe('on phantom/system error', function() {
+        beforeEach(function () {
+            dependenciesStub.child_process.execFile = this.sinon.stub()
+                .callsArgWithAsync(2, new Error('system error'), '', '');
+            this.authModule = proxyquire('../lib/auth', dependenciesStub)(123, 'test');
+        });
+
+        testErrorHandling('system error');
+    })
+
+    describe('on scrabbler error', function() {
+        beforeEach(function () {
+            dependenciesStub.child_process.execFile = this.sinon.stub()
+                .callsArgWithAsync(2, null, '', 'Incorrect name');
+            this.authModule = proxyquire('../lib/auth', dependenciesStub)(123, 'test');
+        });
+
+        testErrorHandling('Incorrect name');
+    })
 });
+
+function testErrorHandling(errorMessage) {
+    it('should call callback with error', function (done) {
+        this.authModule.authorize('user', 'pass', function (err) {
+            expect(err).to.be.an.instanceof(Error);
+            expect(err.message).to.equal(errorMessage);
+            done();
+        })
+    })
+
+    it('should emit "error" event with error', function (done) {
+        this.authModule.authorize('user', 'pass');
+        this.authModule.on('error', function (err) {
+            expect(err).to.be.an.instanceof(Error);
+            expect(err.message).to.equal(errorMessage);
+            done();
+        });
+    })
+
+    it('should emit "error" event when callback and "error" event listeners are not added', function (done) {
+        //use domain to catch unhandled error that is emited when no error event listener is added on EventEmmiter
+        var d = domain.create();
+        d.on('error', function (err) {
+            d.exit();
+            process.nextTick(function () {
+                expect(err).to.be.an.instanceof(Error);
+                expect(err.message).to.equal(errorMessage);
+                done();
+            });
+        });
+
+
+        d.run(function () {
+            this.authModule.authorize('user', 'pass');
+        }.bind(this));
+    })
+}
