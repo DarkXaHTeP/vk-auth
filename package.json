@@ -4,7 +4,8 @@
   "description": "authorization in VK social network as standalone application. Uses PhantomJS for opening VK auth form and entering credentials",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec --bail --check-leaks test/"
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-coverage": "istanbul cover _mocha --bail --check-leaks test/"
   },
   "repository": "DarkXaHTeP/vk-auth",
   "keywords": [
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^3.1.0",
+    "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
     "mocha-sinon": "^1.1.4",
     "proxyquire": "^1.6.0",
