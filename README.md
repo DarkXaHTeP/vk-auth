@@ -6,7 +6,7 @@ Authorization in [Vkontakte](http://vk.com/) social network as [standalone/mobil
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Tasks in Ready](https://badge.waffle.io/DarkXaHTeP/vk-auth.png?label=ready&title=Ready)](https://waffle.io/DarkXaHTeP/vk-auth)
 [![Tasks in Progress](https://badge.waffle.io/DarkXaHTeP/vk-auth.png?label=In%20Progress&title=In%20Progress)](https://waffle.io/DarkXaHTeP/vk-auth)
-  
+![Coverage Status](https://coveralls.io/repos/DarkXaHTeP/vk-auth/badge.svg?branch=master&service=github)](https://coveralls.io/github/DarkXaHTeP/vk-auth?branch=master)
 ## Example
 Using vk-auth is easy enough; it accepts two parameters in it's constructor (applicationId and required permissions) and provides single method for authorization:
 
