@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec --bail --check-leaks test/",
-    "test-coverage": "istanbul cover _mocha --bail --check-leaks test/"
+    "test-coverage": "istanbul cover _mocha --bail --check-leaks test/",
+    "test-acceptance": "mocha --reporter spec --bail --check-leaks test/acceptance/"
   },
   "repository": "DarkXaHTeP/vk-auth",
   "keywords": [
