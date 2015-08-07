@@ -1,13 +1,13 @@
 # vk-auth
 
 Authorization in [Vkontakte](http://vk.com/) social network as [standalone/mobile](http://vk.com/dev/standalone) application. Allows you to get vk token with the help of PhantomJS headless browser.
-######NPM
+####npm
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-######Issues
+####Issues
 [![Tasks in Ready](https://badge.waffle.io/DarkXaHTeP/vk-auth.png?label=ready&title=Ready)](https://waffle.io/DarkXaHTeP/vk-auth)
 [![Tasks in Progress](https://badge.waffle.io/DarkXaHTeP/vk-auth.png?label=In%20Progress&title=In%20Progress)](https://waffle.io/DarkXaHTeP/vk-auth)
-######Build information
+####Build information
 [![Build Status](https://travis-ci.org/DarkXaHTeP/vk-auth.svg?branch=master)](https://travis-ci.org/DarkXaHTeP/vk-auth)
 [![Coverage Status](https://coveralls.io/repos/DarkXaHTeP/vk-auth/badge.svg?branch=master&service=github)](https://coveralls.io/github/DarkXaHTeP/vk-auth?branch=master)
 
@@ -23,6 +23,9 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v1.0.1
+* Fixes in readme
+
 v1.0.0
 * First release
 * Small code improvements

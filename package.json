@@ -1,6 +1,6 @@
 {
   "name": "vk-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "authorization in VK social network as standalone application. Uses PhantomJS for opening VK auth form and entering credentials",
   "main": "index.js",
   "scripts": {
