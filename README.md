@@ -23,6 +23,12 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v1.0.0
+* First release
+* Small code improvements
+* Tests for node.js part of module
+* Daily build to check that module is still working
+
 v0.0.6
 
 * 'error' event is not emited when no listeners attached and callback is present
