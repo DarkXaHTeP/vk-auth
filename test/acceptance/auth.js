@@ -6,8 +6,8 @@ describe('vkAuth', function() {
     this.timeout(120000);
 
     beforeEach(function() {
-        this.auth = vkAuth(process.env.VK_CLIENT_ID, 'audio');
-    })
+        this.auth = vkAuth(process.env.VK_CLIENT_ID, ['audio','messages']);
+    });
 
     it('should successfully get token', function(done) {
         this.auth.authorize(process.env.VK_USERNAME, process.env.VK_PASSWORD, function(err, token) {
@@ -15,13 +15,13 @@ describe('vkAuth', function() {
             expect(token.access_token).to.be.a('string');
             done();
         })
-    })
+    });
 
     it('should return error about invalid credentials', function(done) {
         this.auth.authorize('user@example.com', 'password', function(err, token) {
             expect(token).to.be.undefined;
-            expect(err.message).to.equal('Incorrect login or password\n');
+            expect(err.message).to.equal('Incorrect login or password\r\n');
             done();
         })
     })
-})
+});
