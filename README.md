@@ -23,6 +23,10 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v1.0.3
+* Updates in VK URLs (thanks to [Dmitriy](https://github.com/IamNotUrKitty))
+* Error messages do not contain new line symbol
+
 v1.0.1-1.0.2
 * Fixes in readme
 
