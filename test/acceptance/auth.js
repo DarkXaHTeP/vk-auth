@@ -3,7 +3,7 @@ var expect = chai.expect;
 var vkAuth = require('../../');
 
 describe('vkAuth', function() {
-    this.timeout(120000);
+    this.timeout(20000);
 
     beforeEach(function() {
         this.auth = vkAuth(process.env.VK_CLIENT_ID, ['audio','messages']);
@@ -20,7 +20,7 @@ describe('vkAuth', function() {
     it('should return error about invalid credentials', function(done) {
         this.auth.authorize('user@example.com', 'password', function(err, token) {
             expect(token).to.be.undefined;
-            expect(err.message).to.equal('Incorrect login or password\r\n');
+            expect(err.message).to.equal('Incorrect login or password');
             done();
         })
     })
