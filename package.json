@@ -20,7 +20,7 @@
   "author": "DarkXaHTeP <darkxahtep@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "phantomjs": "1.9.11"
+    "phantomjs-prebuilt": "2.1.7"
   },
   "engines": {
     "node": ">=0.10"

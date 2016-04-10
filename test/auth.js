@@ -6,7 +6,7 @@ chai.use(require('sinon-chai'));
 require('mocha-sinon');
 
 var dependenciesStub = {
-    phantomjs: {path: 'path'},
+    'phantomjs-prebuilt': {path: 'path'},
     child_process: { }
 }
 
