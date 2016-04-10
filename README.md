@@ -23,6 +23,9 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v1.0.5
+* PhantomJS was updated to version 2
+
 v1.0.4
 * Issue with form submit fixed
 
