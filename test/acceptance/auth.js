@@ -3,7 +3,7 @@ var expect = chai.expect;
 var vkAuth = require('../../');
 
 describe('vkAuth', function() {
-    this.timeout(20000);
+    this.timeout(30000);
 
     beforeEach(function() {
         this.auth = vkAuth(process.env.VK_CLIENT_ID, ['audio','messages']);
