@@ -23,6 +23,10 @@ vkAuth.authorize('johndoe@example.com', 'password', function(err, tokenParams) {
 ```
 
 ## Changelog
+v1.0.6
+* Issue with markup change on permissions page fixed
+* Dependencies are updated
+
 v1.0.5
 * PhantomJS was updated to version 2
 
