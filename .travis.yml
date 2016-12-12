@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.12"
+  - "6.9.2"
 sudo: false
 script: "npm run test-coverage && npm run test-acceptance"
 after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"

@@ -20,18 +20,18 @@
   "author": "DarkXaHTeP <darkxahtep@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "phantomjs-prebuilt": "2.1.7"
+    "phantomjs-prebuilt": "2.1.14"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=4"
   },
   "devDependencies": {
-    "chai": "^3.1.0",
-    "istanbul": "^0.3.17",
-    "mocha": "^2.2.5",
-    "mocha-sinon": "^1.1.4",
-    "proxyquire": "^1.6.0",
-    "sinon": "^1.15.4",
-    "sinon-chai": "^2.8.0"
+    "chai": "3.5.0",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0",
+    "mocha-sinon": "1.1.6",
+    "proxyquire": "1.7.10",
+    "sinon": "1.17.6",
+    "sinon-chai": "2.8.0"
   }
 }
